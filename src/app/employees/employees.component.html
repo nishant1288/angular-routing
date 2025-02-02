@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr><th>ID</th> <th>NAME</th> <th>DEPARTMENT</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees" >
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>
+                <a [routerLink]="['/employees', emp.name, emp.id]">
+                    {{emp.department}}
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
